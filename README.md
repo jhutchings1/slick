@@ -1,3 +1,14 @@
+:rotating_light::rotating_light::rotating_light:
+
+This fork exists solely to prevent the parser from infinitely looping when
+an invalid expression is parsed such as:
+
+```js
+slick.parse('()')
+```
+:rotating_light::rotating_light::rotating_light:
+
+
 # Slick
 
 Slick is a standalone selector engine that is totally slick.
