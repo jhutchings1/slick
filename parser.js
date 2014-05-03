@@ -225,7 +225,10 @@ var Expressions = function Expressions(expression){
       });
       if (replacedExpression === expression) {
         // Parser did not advance so the expression must be invalid so bail
-        // out to avoid infinite looping
+        // out to avoid infinite looping and delete all expressions
+        for (var i = 0; i < this.length; i++) {
+          delete this[i];
+        }
         this.length = 0;
         break;
       } else {
