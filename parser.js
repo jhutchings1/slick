@@ -218,9 +218,20 @@ var Expressions = function Expressions(expression){
 
     var self = this
 
-    while (expression) expression = expression.replace(slickRe, function(){
+    var replacedExpression;
+    while (expression) {
+      replacedExpression = expression.replace(slickRe, function(){
         return replacer.apply(self, arguments)
-    })
+      });
+      if (replacedExpression === expression) {
+        // Parser did not advance so the expression must be invalid so bail
+        // out to avoid infinite looping
+        this.length = 0;
+        break;
+      } else {
+        expression = replacedExpression;
+      }
+    }
 }
 
 Expressions.prototype.toString = function(){
