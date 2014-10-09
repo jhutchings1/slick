@@ -1,6 +1,6 @@
 {
-  "name": "slick",
-  "homepage": "https://github.com/kamicane/slick",
+  "name": "atom-slick",
+  "homepage": "https://github.com/atom/slick",
   "version": "1.11.2",
   "main": "./index.js",
   "description": "Standalone CSS Selector Finder and Parser.",
@@ -17,12 +17,12 @@
     "Thomas Aylott <@SubtleGradient>"
   ],
   "bugs": {
-    "url": "https://github.com/kamicane/slick/issues"
+    "url": "https://github.com/atom/slick/issues"
   },
   "license": "MIT (http://mootools.net/license.txt)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kamicane/slick.git"
+    "url": "git://github.com/atom/slick.git"
   },
   "dependencies": {},
   "devDependencies": {},
